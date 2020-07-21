@@ -1,0 +1,10 @@
+.centralize {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.scrollable {
+  max-height: 520px;
+  overflow: scroll;
+}

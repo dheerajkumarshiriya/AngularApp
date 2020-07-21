@@ -1,0 +1,10 @@
+button {
+  margin-top: 20px;
+  width: 340px;
+}
+
+.centrelogin {
+  display: flex;
+  padding-top: 170px;
+  justify-content: center;
+}

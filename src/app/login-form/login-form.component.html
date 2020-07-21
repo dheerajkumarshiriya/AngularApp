@@ -1,0 +1,28 @@
+<div class="centrelogin">
+  <div class="card" style="width: 24rem; background-color: #b8babc3d">
+    <div class="card-body">
+      <h2 class="card-title">Login</h2>
+      <div class="username">
+        <label>Username</label>
+        <input
+          type="text"
+          [(ngModel)]="name"
+          id="defaultLoginFormEmail"
+          class="form-control"
+          placeholder="Username"
+        />
+      </div>
+      <div class="password">
+        <label for="">Password</label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          id="defaultLoginFormPassword"
+          class="form-control"
+          placeholder="Password"
+        />
+        <button class="btn btn-primary" (click)="btnClick()">Login</button>
+      </div>
+    </div>
+  </div>
+</div>

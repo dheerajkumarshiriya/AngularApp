@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-6">
+    <div class="text-left">
+      <div class="dropdown">
+        <h2 class="btn">Please select a Country:</h2>
+        <a
+          class="btn btn-secondary dropdown-toggle"
+          href="#"
+          role="button"
+          id="dropdownMenuLink"
+          data-toggle="dropdown"
+        >
+          {{ Name ? Name : 'Country' }}
+        </a>
+
+        <div class="dropdown-menu scrollable" aria-labelledby="dropdownMenuLink">
+          <a
+            *ngFor="let country of countries; let i = index"
+            class="dropdown-item"
+            (click)="onDropDownListClick(i, country.name, country.slug)"
+            >{{ i }} {{ country.name }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-xs-6">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Country with Covid Cases</h5>
+      <app-cases [Index]="index" [Name]="Name" [Slug]="Slug"></app-cases>
+    </div>
+  </div>
+</div>

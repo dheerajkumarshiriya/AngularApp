@@ -1,0 +1,53 @@
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #343a40;
+  color: white;
+  text-align: center;
+}
+
+footer .menu li a {
+  color: #b1aca1;
+  padding: 10px;
+  text-decoration: none;
+}
+footer .menu li a:hover {
+  color: #7dabdb;
+}
+
+p {
+  color: #b1aca1;
+}
+.fa.fa-facebook,
+.fa.fa-instagram,
+.fa.fa-flickr,
+.fa.fa-twitter,
+.fa.fa-linkedin,
+.fa.fa-google,
+.fa.fa-tumblr {
+  color: hsl(41, 9%, 66%);
+  font-size: 25px;
+  padding: 10px;
+}
+
+.fa.fa-facebook:hover {
+  color: #3b5998;
+}
+.fa.fa-instagram:hover {
+  color: #d32a86;
+}
+.fa.fa-flickr:hover,
+.fa.fa-twitter:hover {
+  color: #55acef;
+}
+.fa.fa-linkedin:hover {
+  color: #283e4a;
+}
+.fa.fa-google:hover {
+  color: #ea4335;
+}
+.fa.fa-tumblr:hover {
+  color: #6794c2;
+}

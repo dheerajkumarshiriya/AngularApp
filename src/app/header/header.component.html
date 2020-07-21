@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg" style="background-color:#343a40">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <div className="navbar-brand">
+      <img src="../../assets/icons8-coronavirus-48.png" alt="Health RIS " />
+    </div>
+    <a class="navbar-brand" style="color: white">Covid19 Reports</a>
+
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/country" style="color: white"
+          >Country <span class="sr-only">(current)</span></a
+        >
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a style="color:white" class="nav-link active" routerLink="/login"
+        >LogOut <span class="sr-only">(current)</span></a
+      >
+    </form>
+  </div>
+</nav>
