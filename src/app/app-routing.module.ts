@@ -8,6 +8,8 @@ import { CasesComponent } from './country/cases/cases.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { AuthGuard } from './auth-guard.service'
 import { DetailsComponent } from './country/cases/details/details.component'
+import { SignUpComponent } from './sign-up/sign-up.component'
+import { EditCountryComponent } from './edit-country/edit-country.component'
 
 const appRoutes: Routes = [
   {
@@ -19,6 +21,7 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard],
     component: DashboardComponent
   },
+
   {
     path: 'country',
     component: CountryComponent,
@@ -38,6 +41,14 @@ const appRoutes: Routes = [
   //   redirectTo: 'login',
   //   pathMatch: 'full'
   // },
+  {
+    path: 'sign-up',
+    component: SignUpComponent
+  },
+  {
+    path: 'edit-country',
+    component: EditCountryComponent
+  },
   {
     path: '**',
     component: PageNotFoundComponent

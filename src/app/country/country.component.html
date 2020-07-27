@@ -33,3 +33,175 @@
     </div>
   </div>
 </div>
+
+<button
+  class="btn btn-primary"
+  (click)="toggleAddCountry()"
+  style="margin-left: 970px; margin-bottom: 20px"
+>
+  <i class="fa fa-plus" aria-hidden="true"></i> {{ editMode ? 'Edit Country' : 'Add Country' }}
+</button>
+
+<!-- ADD COUNTRY -->
+<form (ngSubmit)="onAddItem(f)" #f="ngForm">
+  <table *ngIf="addCountry" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">Country ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Slug</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td>
+          <input
+            type="number"
+            id="countryId"
+            name="countryId"
+            class="form-control"
+            placeholder="ID"
+            required
+            ngModel
+            [pattern]="'^[0-9]+[0-9]*$'"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="countryName"
+            name="countryName"
+            class="form-control"
+            placeholder="Country Name"
+            required
+            ngModel
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="countrySlug"
+            name="countrySlug"
+            class="form-control"
+            placeholder="Country Slug"
+            required
+            ngModel
+          />
+        </td>
+        <td>
+          <button class="btn btn-success" type="submit" [disabled]="!f.valid">
+            {{ editMode ? 'Update' : 'Save' }}
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<!-- ADD COUNTRY -->
+<!-- EDIT COUNTRY -->
+<!-- <form (ngSubmit)="onAddItem(f)" #f="ngForm">
+  <table *ngIf="editCountry" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">Country ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Slug</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td>
+          <input
+            type="number"
+            id="countryId"
+            name="countryId"
+            class="form-control"
+            placeholder="ID"
+            required
+            ngModel
+            [pattern]="'^[1-9]+[0-9]*$'"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="countryName"
+            name="countryName"
+            class="form-control"
+            placeholder="Country Name"
+            required
+            ngModel
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="countrySlug"
+            name="countrySlug"
+            class="form-control"
+            placeholder="Country Slug"
+            required
+            ngModel
+          />
+        </td>
+        <td>
+          <button class="btn btn-success" type="submit" [disabled]="!f.valid">Save</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form> -->
+<!-- EDIT COUNTRY -->
+
+<form>
+  <div class="tabble">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col">Country ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Slug</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <!-- <th scope="col"></th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of countries; index as i">
+          <th scope="row"></th>
+          <td>
+            <!-- <img
+                      [src]="'https://www.countryflags.io/' + data.countryCode + '/shiny/64.png'"
+                      class="mr-2"
+                      style="width: 20px"
+                    /> -->
+          </td>
+          <td>{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.slug }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="onEditItem(i)">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="onDeleteItem(i)">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>

@@ -8,3 +8,10 @@
   max-height: 520px;
   overflow: scroll;
 }
+
+.tabble {
+  height: 25em;
+  /* width: 50 em; */
+  overflow-y: scroll;
+  display: block;
+}

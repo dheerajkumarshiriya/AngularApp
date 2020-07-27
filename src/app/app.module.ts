@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component'
@@ -17,6 +17,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './app-routing.module'
 import { AuthGuard } from './auth-guard.service'
 import { DetailsComponent } from './country/cases/details/details.component'
+import { SignUpComponent } from './sign-up/sign-up.component'
+import { EditCountryComponent } from './edit-country/edit-country.component'
+import { EditService } from './edit-country.service'
 
 @NgModule({
   declarations: [
@@ -29,10 +32,12 @@ import { DetailsComponent } from './country/cases/details/details.component'
     CasesComponent,
     FooterComponent,
     PageNotFoundComponent,
-    DetailsComponent
+    DetailsComponent,
+    SignUpComponent,
+    EditCountryComponent
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  providers: [LoggingService, AuthGuard],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule, HttpClientModule],
+  providers: [LoggingService, AuthGuard, EditService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

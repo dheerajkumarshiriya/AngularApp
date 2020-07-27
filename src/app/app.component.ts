@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
-        if (event['url'] == '/login') {
+        if (event['url'] == '/login' || event['url'] == '/sign-up') {
           this.showHeader = false
         } else {
           this.showHeader = true

@@ -1,27 +1,35 @@
 <div class="centrelogin">
   <div class="card" style="width: 24rem; background-color: #b8babc3d">
     <div class="card-body">
-      <h2 class="card-title">Login</h2>
-      <div class="username">
-        <label>Username</label>
+      <h3 class="card-title">Login</h3>
+      <hr />
+      <div class="form-group">
+        <label for="username">Username</label>
         <input
           type="text"
           [(ngModel)]="name"
-          id="defaultLoginFormEmail"
+          id="username"
           class="form-control"
           placeholder="Username"
         />
       </div>
-      <div class="password">
-        <label for="">Password</label>
+      <div class="form-group">
+        <label for="password">Password</label>
         <input
           type="password"
           [(ngModel)]="password"
-          id="defaultLoginFormPassword"
+          id="password"
           class="form-control"
           placeholder="Password"
         />
         <button class="btn btn-primary" (click)="btnClick()">Login</button>
+        <hr />
+        <p>
+          Dont have an account?
+          <a style="padding-left:80px" routerLinkActive="active" routerLink="/sign-up">
+            SignUp here!</a
+          >
+        </p>
       </div>
     </div>
   </div>

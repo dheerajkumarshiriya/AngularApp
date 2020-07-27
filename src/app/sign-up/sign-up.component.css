@@ -1,0 +1,14 @@
+button {
+  margin-top: 10px;
+  width: 340px;
+}
+
+.centrelogin {
+  display: flex;
+  padding-top: 140px;
+  justify-content: center;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

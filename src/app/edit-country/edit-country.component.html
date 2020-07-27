@@ -1,0 +1,56 @@
+<h3>Edit Country</h3>
+<form (ngSubmit)="onEditItem(f)" #f="ngForm">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">Country ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Slug</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td>
+          <input
+            type="text"
+            id="countryId"
+            name="countryId"
+            ngModel
+            class="form-control"
+            placeholder="ID"
+            [pattern]="'^[1-9]+[0-9]*$'"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="countryName"
+            name="countryName"
+            ngModel
+            class="form-control"
+            placeholder="Country Name"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="countrySlug"
+            name="countrySlug"
+            ngModel
+            class="form-control"
+            placeholder="Slug"
+          />
+        </td>
+        <td>
+          <button class="btn btn-success" type="submit" (importArray)="importedArray($event)">
+            Save
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
